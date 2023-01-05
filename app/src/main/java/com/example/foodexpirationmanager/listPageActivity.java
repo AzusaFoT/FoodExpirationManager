@@ -368,8 +368,10 @@ public class listPageActivity extends Activity {
             cursor = DB.selectData(1, "");
         }
         if (cursor.getCount() == 0){
+<<<<<<< Updated upstream
             Toast.makeText(this,"Failed>:(",Toast.LENGTH_SHORT).show();
 =======
+            Toast.makeText(this,"這裡好空，快新增資料!",Toast.LENGTH_SHORT).show();
 >>>>>>> Stashed changes
         }else{
             //ID,objType,name,tag,buyDate,expiration,num,ps,archived
