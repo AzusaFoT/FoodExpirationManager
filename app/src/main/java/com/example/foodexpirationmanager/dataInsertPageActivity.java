@@ -340,7 +340,7 @@ public class dataInsertPageActivity extends Activity {
                         );
                         //這樣archive有若封存後修改會造成錯誤的問題<不確定>
                     }
-                    Toast toast=Toast.makeText(getApplicationContext(),"新增成功",Toast.LENGTH_SHORT);
+                    Toast toast=Toast.makeText(getApplicationContext(),"儲存成功",Toast.LENGTH_SHORT);
                     toast.show();
                     Intent i=new Intent(dataInsertPageActivity.this,MainActivity.class);
                     startActivity(i);

@@ -369,6 +369,8 @@ public class listPageActivity extends Activity {
         }
         if (cursor.getCount() == 0){
             Toast.makeText(this,"Failed>:(",Toast.LENGTH_SHORT).show();
+=======
+>>>>>>> Stashed changes
         }else{
             //ID,objType,name,tag,buyDate,expiration,num,ps,archived
             while(cursor.moveToNext()){

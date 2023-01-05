@@ -187,16 +187,21 @@ public class GoodAdapter extends RecyclerView.Adapter<GoodAdapter.DataViewHolder
                     number=Integer.parseInt(String.valueOf(num.get(getAdapterPosition())));
                     //當數量剩1時不再減少
                     if(number==0){
+                        Toast toast=Toast.makeText(context,"我沒啦~封存好啦~別再戳啦~"
+                                ,Toast.LENGTH_SHORT);
+                        toast.show();
                     }else{
                         number=number-1;
+                        Toast toast=Toast.makeText(context,"數量減1!請注意!到0會自動封存且無法反悔!",Toast.LENGTH_SHORT);
+                        toast.show();
                     }
                     //↓的確能更新資料
                     updateCVMaker(2,number);
                     list_Quantity_TextView.setText(String.valueOf(number));
                     //↑的確能更新資料
                     //toast報錯
-                    Toast toast=Toast.makeText(context,String.valueOf(number),Toast.LENGTH_SHORT);
-                    toast.show();
+                    //Toast toast=Toast.makeText(context,String.valueOf(number),Toast.LENGTH_SHORT);
+                    //toast.show();
                     //這裡要同步刷新資料庫中的資料(同步過去了)
                     selectData(1,"");
                     //刷新頁面
@@ -249,7 +254,8 @@ public class GoodAdapter extends RecyclerView.Adapter<GoodAdapter.DataViewHolder
                 @Override
                 public void onClick(View view) {
                     updateCVMaker(1,0);
-
+                    Toast toast=Toast.makeText(context,"封存成功",Toast.LENGTH_SHORT);
+                    toast.show();
                     selectData(1,"");
                 }
             });
@@ -298,8 +304,8 @@ public class GoodAdapter extends RecyclerView.Adapter<GoodAdapter.DataViewHolder
                 }
             }
             if (cursor.getCount() == 0){
-                Toast toast=Toast.makeText(context,"ohnyo!",Toast.LENGTH_SHORT);
-                toast.show();
+                //Toast toast=Toast.makeText(context,"ohnyo!",Toast.LENGTH_SHORT);
+                //toast.show();
             }else{
                     //ID,objType,name,tag,buyDate,expiration,num,ps,archived
                 while(cursor.moveToNext()){
@@ -315,8 +321,8 @@ public class GoodAdapter extends RecyclerView.Adapter<GoodAdapter.DataViewHolder
                 }
                 //不確定會不會因為timelimit出事
 
-                Toast toast=Toast.makeText(context,"well done!",Toast.LENGTH_SHORT);
-                toast.show();
+                //Toast toast=Toast.makeText(context,"well done!",Toast.LENGTH_SHORT);
+                //toast.show();
             }
 
             }

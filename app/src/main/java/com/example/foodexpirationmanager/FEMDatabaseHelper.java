@@ -85,13 +85,13 @@ public class FEMDatabaseHelper extends SQLiteOpenHelper {
         }
 
         if (result == -1 ){
-            Toast.makeText(context,"insert Failed>:(",Toast.LENGTH_SHORT).show();
+            //Toast.makeText(context,"insert Failed>:(",Toast.LENGTH_SHORT).show();
         }
         else if (result == -2 ){
-            Toast.makeText(context,"update Failed>:(",Toast.LENGTH_SHORT).show();
+            //Toast.makeText(context,"update Failed>:(",Toast.LENGTH_SHORT).show();
         }
         else{
-            Toast.makeText(context,"YES! :)",Toast.LENGTH_SHORT).show();
+            //Toast.makeText(context,"YES! :)",Toast.LENGTH_SHORT).show();
         }
         //db.execSQL();
     }

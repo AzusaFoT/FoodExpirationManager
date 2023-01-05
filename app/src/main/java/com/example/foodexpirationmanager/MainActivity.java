@@ -208,7 +208,7 @@ public class MainActivity extends Activity {
         //sql select
         Cursor cursor = DB.selectData(2,"");
         if (cursor.getCount() == 0){
-            Toast.makeText(this,"no 7 days limit",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,"沒有7天內過期的食物",Toast.LENGTH_SHORT).show();
         }else{
             //ID,objType,name,tag,buyDate,expiration,num,ps,archived,timelimit
             while(cursor.moveToNext()){
